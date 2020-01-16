@@ -6,27 +6,41 @@ def create_dir(directory):
 		os.makedirs(directory)
 
 	else:
-		print("Directory already exists")
-
-create_dir('w3schools')
+		print("directory already exists")
 
 
-#creating data files
+create_dir("w3schools")
+
+
+#https: // www.w3schools.com / python / default.asp
+
+
 def create_data_files(project_name, base_url):
-	queue = project_name + '/queue.txt'
+	queue = project_name +  '/queue.txt'
 	crawled = project_name + '/crawled.txt'
-
 	if not os.path.isfile(queue):
-		write_file(queue, base_url)
+		write_files(queue, base_url)
 	if not os.path.isfile(crawled):
-		write_file(crawled, ' ')
+		write_files(crawled, '')
 
-def write_file(path, data):
+
+def write_files(path, data):
 	f = open(path, 'w')
 	f.write(data)
 	f.close()
 
-create_data_files('w3schools', 'https://www.w3schools.com/python/default.asp')
+create_data_files('w3schools', 'https: // www.w3schools.com / python / default.asp')
+
+
+def append_to_files(path, data):
+	with open(path, 'a') as file:
+		file.write(data + '\n')
+
+
+#deleting the data
+def delete_files(path):
+	with open(path, 'w') :
+		pass
 
 
 
