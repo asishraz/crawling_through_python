@@ -9,7 +9,7 @@ def create_dir(directory):
 		print("directory already exists")
 
 
-create_dir(input(""))
+create_dir("w3schools")
 
 
 #https: // www.w3schools.com / python / default.asp
